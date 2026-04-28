@@ -19,7 +19,6 @@ header {
     padding: 60px 20px;
     text-align: center;
     color: white;
-    /* Removed solid background so it blends with the body gradient */
 }
 
 header h1 {
