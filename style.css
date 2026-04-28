@@ -1,84 +1,90 @@
-/* Custom Variables for easy changes */
 :root {
     --royal-blue: #0038A8;
     --crimson-red: #CE1126;
-    --deep-violet: #672467; /* The "Best Mix" of the two */
-    --light-bg: #f4f4f4;
+    --deep-violet: #672467;
+    --glass-white: rgba(255, 255, 255, 0.95); /* Makes cards readable */
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    max-width: 900px;
-    margin: 0 auto;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
     padding: 0;
-    background-color: var(--light-bg);
+    color: #333;
+    /* The gradient is now the background of the entire page */
+    background: linear-gradient(135deg, var(--royal-blue) 0%, var(--deep-violet) 50%, var(--crimson-red) 100%);
+    background-attachment: fixed; /* Keeps gradient still while you scroll */
 }
 
-/* Header with the Royal Blue to Crimson Red Gradient */
 header {
-    background: linear-gradient(135deg, var(--royal-blue) 0%, var(--deep-violet) 50%, var(--crimson-red) 100%);
-    color: white;
     padding: 60px 20px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    color: white;
+    /* Removed solid background so it blends with the body gradient */
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* Navigation or Section Links */
-h2 {
-    color: var(--royal-blue);
-    border-bottom: 3px solid var(--crimson-red);
-    display: inline-block;
-    padding-bottom: 5px;
-    margin-top: 40px;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 section {
-    padding: 20px;
-    background: white;
-    margin: 20px 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background: var(--glass-white);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-/* Project Cards */
-.project-card {
-    border-left: 5px solid var(--royal-blue);
-    padding: 15px;
-    margin: 20px 0;
-    background: #fff;
-    transition: transform 0.3s ease;
+h2 {
+    color: var(--royal-blue);
+    border-bottom: 3px solid var(--crimson-red);
+    padding-bottom: 5px;
 }
 
-.project-card:hover {
-    transform: scale(1.02);
-    border-left-color: var(--crimson-red);
+/* Skills List Styling */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
 }
 
-.project-card h3 {
-    margin-top: 0;
-    color: var(--deep-violet);
-}
-
-/* Buttons or Call to Action */
-.btn {
-    display: inline-block;
-    background: var(--royal-blue);
+.skills-list li {
+    background: var(--deep-violet);
     color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
 }
 
-.btn:hover {
-    background: var(--crimson-red);
+/* Contact Links */
+.contact-links a {
+    color: var(--crimson-red);
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+.btn-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--royal-blue);
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid var(--royal-blue);
+    padding: 5px 12px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-link:hover {
+    background-color: var(--royal-blue);
+    color: white;
 }
